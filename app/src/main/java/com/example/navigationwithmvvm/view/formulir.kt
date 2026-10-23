@@ -4,6 +4,9 @@ import android.R.attr.title
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.CheckboxDefaults.colors
@@ -17,6 +20,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalOf
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
@@ -67,7 +71,7 @@ fun FormIsian(
                     .padding(20.dp)
                     .width(250.dp)
                         thickness = Thickness,
-                    color = color.Red)\
+                    color = color.Red)
 
             OutlinedTextField(
                 value = "",
@@ -75,8 +79,13 @@ fun FormIsian(
                 modifier = Modifier
                     .padding(top = 20.dp)
                     .width(250.dp),
-                label = { Text(text = "Nama Lengkap") },
+                label = { Text(text = "Alamat") },
                 onValueChange = {},
+            )
+            Spacer(modifier = Modifier.height(30.dp))
+            Button(
+                modifier = Modifier.fillMaxSize(1f)
+                
             )
 
 
